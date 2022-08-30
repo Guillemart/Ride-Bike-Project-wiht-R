@@ -195,10 +195,7 @@ bike_rides_v2 %>%
 
 counts <- aggregate(bike_rides_v2$ride_length ~ bike_rides_v2$customer_type + bike_rides_v2$day_of_week, FUN = mean)
 
-# Open library to move the data frame to excel all united for further investigation
-library(openxlsx)
-
-
+# Finally I move the data frame to a csv file for further investigation and to make visualizations in Tableau.
 
 write.csv(bike_rides_v2,"bike_rides_full.csv")
 
